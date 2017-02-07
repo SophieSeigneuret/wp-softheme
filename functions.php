@@ -101,11 +101,20 @@ function sof_theme_widgets_init() {
 }
 add_action( 'widgets_init', 'sof_theme_widgets_init' );
 
+
+/* affichage de l'image à la une */
+//add_action('after_theme_setup','gkp_add_post_thumbnail');
+//function gkp_add_post_thumbnail() {
+//	add_theme_support( 'post-thumbnails', array( 'post', 'page', 'portfolio' ) );
+//}
+
 /**
  * Enqueue scripts and styles.
  */
 function sof_theme_scripts() {
 	wp_enqueue_style( 'sof-theme-style', get_stylesheet_uri() );
+
+	wp_enqueue_style('softheme-googlefonts', esc_url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,500,600|Amatic+SC:400,700" rel="stylesheet'));
 
 	wp_enqueue_script( 'sof-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

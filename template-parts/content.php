@@ -18,13 +18,21 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php sof_theme_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
+		// affichage de l'image à la une
+		if (has_post_thumbnail()) {
+			the_post_thumbnail('large');
+		}
+        ?>
+
 	</header><!-- .entry-header -->
+
+    <?php if ( 'post' === get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php sof_theme_posted_on(); ?>
+            <?php sof_theme_entry_footer(); ?>
+        </div><!-- .entry-meta -->
+        <?php
+    endif; ?>
 
 	<div class="entry-content">
 		<?php
@@ -41,7 +49,5 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php sof_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->
