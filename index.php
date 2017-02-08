@@ -13,7 +13,6 @@
  */
 
 get_header();
-get_sidebar();
 ?>
 
 	<div id="primary" class="content-area">
@@ -55,4 +54,6 @@ get_sidebar();
 
 <?php
 
+dynamic_sidebar( 'sidebar-search' );
+get_sidebar();
 get_footer();
