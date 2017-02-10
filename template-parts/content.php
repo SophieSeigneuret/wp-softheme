@@ -38,7 +38,7 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continuer la lecture %s <span class="meta-nav">&rarr;</span>', 'sof-theme' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continuer la lecture %s <span class="meta-nav">-></span>', 'sof-theme' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 

@@ -25,7 +25,7 @@ function sof_theme_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posté le %s', 'post date', 'sof-theme' ),
+		esc_html_x( 'Publié le %s', 'post date', 'sof-theme' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -49,13 +49,7 @@ function sof_theme_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'sof-theme' ) );
 		if ( $categories_list && sof_theme_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posté dans %1$s', 'sof-theme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
-
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'sof-theme' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'sof-theme' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'dans %1$s', 'sof-theme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 	}
 
@@ -66,10 +60,18 @@ function sof_theme_entry_footer() {
 		echo '</span>';
 	}
 
+	if ( 'post' === get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'sof-theme' ) );
+		if ( $tags_list ) {
+			printf( '<span class="tags-links">' . esc_html__( 'Tags : %1$s', 'sof-theme' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+		}
+	}
+
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'sof-theme' ),
+			esc_html__( 'Editer %s', 'sof-theme' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
