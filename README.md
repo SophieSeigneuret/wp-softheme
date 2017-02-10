@@ -28,6 +28,6 @@ Détail :
 
 Dépendances / Plugins :
 -----------------------
-* Akismet : anti-spam au niveau des commentaires. Dès qu’un commentaire suspect est détecté, Akismet le marque en tant qu’indésirable et il ne sera jamais publié sur votre blog.
-* WP Optimize : Par défaut quand vous rédigez un article, WordPress le sauvegarde automatiquement à intervalles réguliers. Le soucis est que sur le long terme cela encombre la base de données. WP Optimize supprime ces révisions inutiles.
-* Google Map Embed : intégration d’une carte google map, possibilité de choisir plusieurs cartes, la taille, les marqueurs.
+* __Akismet :__ anti-spam au niveau des commentaires. Dès qu’un commentaire suspect est détecté, Akismet le marque en tant qu’indésirable et il ne sera jamais publié sur votre blog.
+* __WP Optimize :__ Par défaut quand vous rédigez un article, WordPress le sauvegarde automatiquement à intervalles réguliers. Le soucis est que sur le long terme cela encombre la base de données. WP Optimize supprime ces révisions inutiles.
+* __Google Map Embed :__ intégration d’une carte google map, possibilité de choisir plusieurs cartes, la taille, les marqueurs.
